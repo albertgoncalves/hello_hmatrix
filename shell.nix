@@ -1,7 +1,7 @@
 { pkgs ? import <nixpkgs> {} }:
 with pkgs; mkShell {
     name = "hmatrix";
-    buildInputs = [ (haskell.packages.ghc843.ghcWithPackages (pkgs: [
+    buildInputs = [ (haskell.packages.ghc862.ghcWithPackages (pkgs: [
                         pkgs.hmatrix
                     ]))
                     haskellPackages.hlint
