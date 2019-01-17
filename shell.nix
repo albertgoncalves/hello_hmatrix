@@ -9,8 +9,10 @@ with pkgs; mkShell {
                     libiconv
                   ];
     shellHook = ''
-        alias ls='ls --color=auto'
-        alias ll='ls -al'
+        if [ $(uname -s) = "Darwin" ]; then
+            alias ls='ls --color=auto'
+            alias ll='ls -al'
+        fi
         alias hlint=hlint -c=never
         alias hindent="hindent --indent-size 4 --sort-imports --line-length 79"
     '';
