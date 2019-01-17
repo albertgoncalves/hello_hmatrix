@@ -1,6 +1,6 @@
 {-# OPTIONS_GHC -Wall #-}
 
-import Numeric.LinearAlgebra as N
+import Numeric.LinearAlgebra
 import Prelude hiding ((<>))
 
 m :: Matrix R
