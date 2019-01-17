@@ -16,7 +16,7 @@ b :: Matrix R
 b = (5 >< 2) [1, 3, 0, 2, -1, 5, 7, 7, 6, 0]
 
 c :: Matrix R
-c = uniformSample 1 5 $ replicate 3 (0.0, 1.0) -- 4x5 random uniform
+c = uniformSample 1 5 $ replicate 3 (0.0, 1.0) -- 5x3 random uniform (0.0-1.0)
 
 dispList :: Int -> [Matrix Double] -> IO ()
 dispList = mapM_ . disp
