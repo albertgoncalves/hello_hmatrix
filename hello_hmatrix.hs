@@ -23,9 +23,12 @@ dispList = mapM_ . disp
 
 main :: IO ()
 main = do
-    print $ m #> v -- matrix-vector product
+    let mv = m #> v -- matrix-vector product
+    print mv
+
     print $ v <.> v -- dot product of 2 vectors
+
     dispList
         3 -- decimal precision to print
-        [a, b, a <> b, c, c <> a]
+        [a, b, a <> b, c, c <> a, c * 3.0, mv `outer` v]
         --        \----------\---- matrix-matrix product
